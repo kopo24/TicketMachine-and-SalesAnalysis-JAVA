@@ -25,14 +25,15 @@ public class Processing {
 			et.age = Integer.parseInt("20" + et.juminNum.substring(0, 2));
 			et.age = Integer.parseInt(sdf.format(date)) - et.age;
 		}
+		
 		et.age += 1; // 한국식 나이
 		
 		// if문과 et.age 값으로 int[] AGE_GRADE값 뽑아서 et.age 재초기화. (0:대인, 1:청소년, 2:소인, 3:경로, 4:유아)
-		if (et.age >= 65) et.age = ConstValue.AGE_GRADE[3];
-		else if (et.age >= 19 && et.age < 65) et.age = ConstValue.AGE_GRADE[0];
-		else if (et.age >= 13 && et.age < 19) et.age = ConstValue.AGE_GRADE[1];
-		else if (et.age >= 3 && et.age < 13) et.age = ConstValue.AGE_GRADE[2];
-		else if (et.age <= 2) et.age = ConstValue.AGE_GRADE[4];
+		if (et.age >= ConstValue.OLD) et.age = ConstValue.AGE_GRADE[3];
+		else if (et.age >= ConstValue.ADULT && et.age < ConstValue.OLD) et.age = ConstValue.AGE_GRADE[0];
+		else if (et.age >= ConstValue.TEENAGER && et.age < ConstValue.ADULT) et.age = ConstValue.AGE_GRADE[1];
+		else if (et.age >= ConstValue.CHILD && et.age < ConstValue.TEENAGER) et.age = ConstValue.AGE_GRADE[2];
+		else if (et.age <= ConstValue.BABY) et.age = ConstValue.AGE_GRADE[4];
 		
 		// et.price = ConstValue.TICKET_PRICE[et.whatTime - 1][et.age]
 		et.price = ConstValue.TICKET_PRICE[et.whatTime - 1][et.age];

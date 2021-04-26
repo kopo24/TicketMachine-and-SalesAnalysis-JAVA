@@ -15,7 +15,7 @@ public class MakeFile {
 	
 	public MakeFile() {
 		try {
-			File f = new File("C:\\Users\\Yang\\Desktop\\Thema_Park_Ticket_Machine.csv");
+			File f = new File("C:\\Users\\rhfah\\Desktop\\Thema_Park_Ticket_Machine.csv");
 			bw = new BufferedWriter(new FileWriter(f, true)); // f가 잡은 파일에 append 할꺼냐? true
 			br = new BufferedReader(new FileReader(f));
 		} catch (Exception e) {

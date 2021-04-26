@@ -8,9 +8,19 @@ public class ConstValue {
 	
 	final static String DAYTIME = "주간권";
 	final static String NIGHTTIME = "야간권";
+	
+	// 주민등록번호 기본 13자리
+	final static int NOMAL_JUMIN_NUMBER = 13;
+	final static int MIN_JUMIN_NUMBER = 1;
+	final static int MAX_JUMIN_NUMBER = 4;
+	
+	// 한 번에 구매할 수 있는 티켓 갯수 최대, 최소
+	final static int MIN_TICKET = 0;
+	final static int MAX_TICKET = 10;
 		
 	// 이용요금(주야, 나이에 따름)
-	final static int[][] TICKET_PRICE = {{56000,47000,44000,44000,0},{46000,40000,37000,37000,0}};
+	final static int[][] TICKET_PRICE = {{56000,47000,44000,44000,0},
+										 {46000,40000,37000,37000,0}};
 	
 	// 나이에 따른 구분(0:대인, 1:청소년, 2:소인, 3:경로, 4:유아)
 	final static int[] AGE_GRADE = {0,1,2,3,4};
@@ -47,10 +57,10 @@ public class ConstValue {
 	
 	// InputFromConsole Class에서 계속 발권 여부  선택
 	final static int MENU_MORE_TICKET = 1; // 계속 발행
-//	final static int MENU_NO_THANKS = 2; // 발행 종료
+	final static int MENU_NO_THANKS = 2; // 발행 종료
 	
 	// 프로그램 종료 여부 선택
 	final static int NEW_ORDER = 1; // 새 주문 진행
-//	final static int EXIT = 2; // 프로그램 종료
+	final static int EXIT = 2; // 프로그램 종료
 	
 }
