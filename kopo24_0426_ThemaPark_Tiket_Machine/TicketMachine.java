@@ -9,8 +9,17 @@ public class TicketMachine {
 	static ExchangeType et = new ExchangeType();
 	
 	public static void main(String[] args) {
+		MakeFile mf = new MakeFile();
+		
+		mf.HeaderWrite();
 		do {
 			do {
+				// add하고서 다른 et를 가리키도록 재생성!
+				// 교수님이 개념을 잡아주셔서 해결!
+				// add는 ArrayList에 추가, 저장하는 것이 아니라 어느 한 메모리에 그 결과를
+				// 만들고 가리키고 있는 것일 뿐.
+				et = new ExchangeType();
+				
 				// 권종 선택, InputFromConsole로 가서 ExchangeType의 int whatTime 초기화
 				ifc.selectTime(et);
 
@@ -47,11 +56,14 @@ public class TicketMachine {
 
 			System.out.printf("======================== 폴리랜드 ========================\n");
 
+			mf.DataWrite(proAL);
+			
 			// 계속 진행 여부(1새로운 주문, proAL초기화 / 2프로그램 종료)
 			ifc.newOrexit(et);
 			
 			proAL.clear();
 			
 		} while (et.newOrexit == ConstValue.NEW_ORDER);
+		mf.FileClose();
 	}
 }

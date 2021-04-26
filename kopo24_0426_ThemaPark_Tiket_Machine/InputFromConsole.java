@@ -27,7 +27,7 @@ public class InputFromConsole {
 	public void inputJuminNum(ExchangeType et) {
 		System.out.printf("주민등록번호를 입력하세요\n");
 		System.out.printf("-> ");
-		sc.nextLine();
+		sc.nextLine(); // 주간 야간 선택의 개행 처리
 		et.juminNum = sc.nextLine();
 	}
 	
