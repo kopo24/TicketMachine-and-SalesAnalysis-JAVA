@@ -20,6 +20,12 @@ public class ExchangeType {
 	// Processing Class에서 선택된 가격
 	int price;
 	
+	// 총 가격
+	int sumprice;
+	
+	// 티켓 발권 일자
+	String ticketdate;
+	
 	// 티켓 지속발행 여부
 	int goOrstop;
 	
