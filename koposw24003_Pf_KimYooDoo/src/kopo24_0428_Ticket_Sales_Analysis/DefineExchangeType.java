@@ -10,7 +10,7 @@ public class DefineExchangeType {
 	// 리포트파일에서 읽어들인 ExchangeType 값들을 한 줄씩 읽으면 ArrayList에 add한다. 정의된 ArrayList를 리턴한다
 	public ArrayList<ExchangeType> Define(ExchangeType et, ArrayList<ExchangeType> etAL) {
 		try {
-			File f_read = new File("C:\\Users\\Yang\\Desktop\\Report.csv");
+			File f_read = new File("Report.csv");
 			BufferedReader br_read = new BufferedReader(new FileReader(f_read));
 			
 			// br_read로 읽어들일 파일을 한 줄씩 저장할 곳

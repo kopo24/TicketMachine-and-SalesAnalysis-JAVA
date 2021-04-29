@@ -13,7 +13,7 @@ public class MakeFile {
 	
 	public MakeFile() {
 		try {
-			File f = new File("C:\\Users\\Yang\\Desktop\\Report.csv");
+			File f = new File("Report.csv");
 			bw = new BufferedWriter(new FileWriter(f, true)); // f가 잡은 파일에 append 할꺼냐? true
 			br = new BufferedReader(new FileReader(f));
 		} catch (Exception e) {

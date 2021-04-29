@@ -14,7 +14,7 @@ public class MakeFile {
 	// 생성자로서 일자별 매출 현황파일 생성시 사용할 예정
 	public MakeFile() {
 		try {
-			File f = new File("C:\\Users\\Yang\\Desktop\\DateSales.csv");
+			File f = new File("DateSales.csv");
 			bw = new BufferedWriter(new FileWriter(f, true)); // f가 잡은 파일에 append 할꺼냐? true
 			br = new BufferedReader(new FileReader(f));
 		} catch (Exception e) {
@@ -25,7 +25,7 @@ public class MakeFile {
 	// 매개변수 1개있는 생성자로서 연령별 매출 현황파일 생성시 사용할 예정
 	public MakeFile(int two) {
 		try {
-			File f = new File("C:\\Users\\Yang\\Desktop\\AgeSales.csv");
+			File f = new File("AgeSales.csv");
 			bw = new BufferedWriter(new FileWriter(f, true)); // f가 잡은 파일에 append 할꺼냐? true
 			br = new BufferedReader(new FileReader(f));
 		} catch (Exception e) {
