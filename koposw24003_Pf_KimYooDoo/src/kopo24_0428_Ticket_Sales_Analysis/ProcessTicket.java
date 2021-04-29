@@ -13,7 +13,7 @@ public class ProcessTicket {
 		et.dateprice = etAL.get(0).price;
 		
 		// 일자가 같은 금액들의 합을 add
-		et.dayprice = new ArrayList<String>();
+		et.incomePerdate = new ArrayList<String>();
 		
 		for (int i = 0; i < etAL.size(); i++) {
 			
@@ -61,12 +61,12 @@ public class ProcessTicket {
 			
 			// 일자별 매출 계산
 			if (i == (etAL.size() - 1)) { // 마지막 줄이라면 그냥 마지막 날자와 여태까지의 값을 ArrayList에 add
-				et.dayprice.add(etAL.get(i).ticketdate + "," + et.dateprice);
+				et.incomePerdate.add(etAL.get(i).ticketdate + "," + et.dateprice);
 			} else { // 마지막 줄이 아니라면
 				// i번쨰 줄의 날짜가 i+1번째 줄의 날짜와 같지 않다면(== 다르다면)
 				if (!(etAL.get(i).ticketdate.equals(etAL.get(i+1).ticketdate))) {
 					// i번째 날짜에 콤마를 붙이고 이어서 여태까지의 금액 합을 문자형으로 바꿔 add(대입시 앞부분이 문자열이면 정수는 문자열로 바뀜)
-					et.dayprice.add(etAL.get(i).ticketdate + "," + et.dateprice);
+					et.incomePerdate.add(etAL.get(i).ticketdate + "," + et.dateprice);
 					// 다음 날짜 금액계산시 첫 번째 금액값을 저장함
 					et.dateprice = etAL.get(i+1).price;
 				}
@@ -84,8 +84,8 @@ public class ProcessTicket {
 	 * 덮어씌운 ExchangeType의 값으로 아래 메소드별 조건에 만족하는 값을 return한다.
 	 */
 	// [일자,금액합]모양의 문자열이 add되어있는 ArrayList
-	public ArrayList<String> dayPrice() {
-		return et.dayprice;
+	public ArrayList<String> incomePerdate() {
+		return et.incomePerdate;
 	}
 	
 	// 매개변수에 맞는 우대권 종류별 합을 리턴

@@ -62,8 +62,8 @@ public class MakeFile {
 	public void DataWriteForDate(ProcessTicket pt) {
 		String[] dateNprice;
 		try {
-			for (int i = 0; i < pt.dayPrice().size(); i++) {
-				dateNprice = pt.dayPrice().get(i).split(",");
+			for (int i = 0; i < pt.incomePerdate().size(); i++) {
+				dateNprice = pt.incomePerdate().get(i).split(",");
 				String writetxt = dateNprice[0].substring(0, 4) + "-" + dateNprice[0].substring(4, 6)
 								  + "-" + dateNprice[0].substring(6) + "," + dateNprice[1];
 				

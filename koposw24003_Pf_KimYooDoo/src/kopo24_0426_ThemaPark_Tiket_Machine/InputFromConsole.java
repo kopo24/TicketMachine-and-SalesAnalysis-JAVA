@@ -29,7 +29,7 @@ public class InputFromConsole {
 			System.out.printf("1. 주간권\n");
 			System.out.printf("2. 야간권\n");
 			System.out.printf("-> ");
-			et.whatTime = sc.nextInt();
+			et.whatTime = sc.nextInt(); // 이걸 문자열(nextLine())으로 받아서 Integer.parse로 하면 개행 넣을 필요 없다.
 		}
 	}
 	

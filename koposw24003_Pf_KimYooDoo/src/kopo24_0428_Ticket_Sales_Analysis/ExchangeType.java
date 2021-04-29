@@ -52,5 +52,5 @@ public class ExchangeType {
 	int dateprice;
 	
 	// [일자]와 [그날 매출]을 문자형으로 콤마 기준으로 add
-	ArrayList<String> dayprice;
+	ArrayList<String> incomePerdate;
 }

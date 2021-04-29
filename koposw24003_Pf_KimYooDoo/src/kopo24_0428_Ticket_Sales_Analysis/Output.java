@@ -55,8 +55,8 @@ public class Output {
 		String[] dateNprice;
 		System.out.printf("========== 일자별 매출 현황 ==========\n");
 		
-		for (int i = 0; i < pt.dayPrice().size(); i++) {
-			dateNprice = pt.dayPrice().get(i).split(",");
+		for (int i = 0; i < pt.incomePerdate().size(); i++) {
+			dateNprice = pt.incomePerdate().get(i).split(",");
 			System.out.printf("%s년 %s월 %s일 : 총 매출%10s원\n", dateNprice[0].substring(0, 4),
 							  dateNprice[0].substring(4, 6),dateNprice[0].substring(6), dateNprice[1]);
 		}
